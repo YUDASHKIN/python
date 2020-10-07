@@ -7,7 +7,7 @@
 
 numb = 5
 text = "яблок"
-print(f'{numb:d} {text}')
+print(f'{numb} {text}')
 
 print("Анкета: ")
 name = input("Как Вас зовут? ")

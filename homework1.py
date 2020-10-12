@@ -13,7 +13,7 @@ print("Анкета: ")
 name = input("Как Вас зовут? ")
 age = int(input("Сколько Вам полных лет? "))
 country = input("В какой стране Вы родились? ")
-print("Имя: %s; Возраст: %d; Страна: %s." % (name, age, country))
+print(f"Имя: {name}; Возраст: {age}; Страна: {country}.")  # изменил формат
 
 '''
 1.2 Пользователь вводит время в секундах. 
@@ -26,7 +26,7 @@ timeSec = int(input("Введите время в секундах: "))
 hours = timeSec // 3600
 minutes = (timeSec - hours * 3600) // 60
 seconds = timeSec - (hours * 3600 + minutes * 60)
-print(f'Точное время: {hours}:{minutes}:{seconds}')
+print(f"Точное время: {hours:02}:{minutes:02}:{seconds:02}")  # показ "0"
 
 '''
 1.3 Узнайте у пользователя число n.
@@ -69,10 +69,10 @@ while n >= 1:
 и определите прибыль фирмы в расчете на одного сотрудника.
 '''
 
-proceeds = int(input("Введите значение выручки фирмы: "))
-costs = int(input("Введите значение издержек фирмы: "))
-profit: int = proceeds - costs
-lesion: int = costs - proceeds
+proceeds = float(input("Введите значение выручки фирмы: "))  # int заменил float
+costs = float(input("Введите значение издержек фирмы: "))  # int заменил float
+profit: float = proceeds - costs
+lesion: float = costs - proceeds
 if proceeds > costs:
     print(f'Фирма в прибыли: {profit:.2f} RU, рентабельность составит: {profit / proceeds:.2f} RU')
     staff = int(input("Укажите число сотрудников фирмы: "))
@@ -93,10 +93,10 @@ else:
 выводить одно натуральное число — номер дня.
 '''
 
-a = int(input("Введите результаты пробежки первого дня в (км): "))
-b = int(input("Введите результат по нормативу в (км): "))
+a = float(input("Введите результаты пробежки первого дня в (км): "))  # int заменил float
+b = float(input("Введите результат по нормативу в (км): "))  # int заменил float
 numbDay = 1
 while a < b:
-    a = a + 0.1 * a
+    a = a + 0.1 * a  # a += a * 0.1
     numbDay += 1
 print(f"на {numbDay}" "-й день спортсмен достиг результата — не менее 3 км.")
